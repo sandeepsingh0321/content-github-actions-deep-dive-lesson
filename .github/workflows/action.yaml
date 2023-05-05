@@ -10,4 +10,4 @@ jobs:
       - name: start with a message
         uses: actions/checkout@v2
       - name: step 2
-        run: echo "start step 2
+        run: echo "start step 2"
