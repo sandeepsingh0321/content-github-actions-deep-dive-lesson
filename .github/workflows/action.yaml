@@ -1,0 +1,13 @@
+name: build a pythong lambda code
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: start with a message
+        uses: actions/checkout@v2
+      - name: step 2
+        run: echo "start step 2
