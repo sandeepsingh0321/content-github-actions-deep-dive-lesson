@@ -15,7 +15,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: ${{ secrets.roleName }}
-          aws-region: ${{inputs.target_region}}
+          aws-region: ${{secrets.target_region}}
           role-duration-seconds: 3600
           role-session-name: GithubActions-Session
       - name: connect to S3
