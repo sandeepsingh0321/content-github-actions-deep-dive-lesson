@@ -11,3 +11,13 @@ jobs:
         uses: actions/checkout@v2
       - name: step 2
         run: echo "start step 2"
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: ${{ secrets.roleName }}
+          aws-region: ${{inputs.target_region}}
+          role-duration-seconds: 3600
+          role-session-name: GithubActions-Session
+      - name: connect to S3
+        run: aws s3 ls; echo "completed"
+        
